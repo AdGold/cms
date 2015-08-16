@@ -94,10 +94,7 @@
         <col style="width: 60%"/>
     </colgroup>
     <tbody>
-        <tr>
-            <th>{{ _("Type") }}</th>
-            <td colspan="2">{% set task_type = get_task_type(dataset=task.active_dataset) %}{{ task_type.name }}</td>
-        </tr>
+{% set task_type = get_task_type(dataset=task.active_dataset) %}
 {% if task.active_dataset.time_limit is not None %}
         <tr>
             <th>{{ _("Time limit") }}</th>
